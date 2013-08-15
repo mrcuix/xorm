@@ -61,7 +61,7 @@ import (
 	_ "github.com/Go-SQL-Driver/MySQL"
 	"github.com/lunny/xorm"
 )
-err, engine := xorm.NewEngine("mysql", "root:123@/test?charset=utf8")
+engine, err := xorm.NewEngine("mysql", "root:123@/test?charset=utf8")
 defer engine.Close()
 ```
 
@@ -72,7 +72,7 @@ import (
 	_ "github.com/mattn/go-sqlite3"
 	"github.com/lunny/xorm"
 )
-err, engine = xorm.NewEngine("sqlite3", "./test.db")
+engine, err = xorm.NewEngine("sqlite3", "./test.db")
 defer engine.Close()
 ```
 
