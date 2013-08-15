@@ -173,8 +173,8 @@ err := engine.Cols("id", "name").Find(&tenusers) //Find only id and name
 7.Delete
 
 ```Go
-err := engine.Delete(&User{Id:1})
-// or err := engine.Id(1).Delete(&User{})
+_, err := engine.Delete(&User{Id:1})
+// or _, err := engine.Id(1).Delete(&User{})
 ```
 
 8.Count
